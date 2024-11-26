@@ -7,6 +7,7 @@ async def check_combination(new_title: str, title_trie: TitleTrie) -> dict:
     start_time = time.time()
     print(f"[check_combination] Started at {start_time}")
     combination_titles = await asyncio.to_thread(title_trie.find_combination_titles,new_title)
+    # combination_titles = title_trie.find_combination_titles(new_title)
     end_time = time.time()
     print(f"[check_combination] Finished at {end_time}. Duration: {end_time - start_time:.2f} seconds")
 
